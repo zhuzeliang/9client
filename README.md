@@ -46,7 +46,7 @@ var URL = 'www.baidu.com'
        
 ### 2. 注释
 
-* `a)单行注释`: 
+* a)单行注释: 
 
 ① 单独一行：//(双斜线)与注释文字之间保留一个空格。
 
@@ -63,7 +63,7 @@ var maxCount = 10; // 设置最大量；2)在代码后面注释
 
 // setName(); // 3)注释代码
 ```
-* `b)多行注释`: 
+* b)多行注释: 
         
 ① 若开始(/*)和结束(*/)都在一行，推荐采用单行注释。
 
@@ -77,7 +77,7 @@ var maxCount = 10; // 设置最大量；2)在代码后面注释
 */
 setTitle();
 ```
-* `c)函数注释`: 
+* c)函数注释: 
 
 函数(方法)注释也是多行注释的一种，但是包含了特殊的注释要求，参照 javadoc(百度百科)
 
@@ -119,15 +119,15 @@ obj.getSomeone() === 'apple' ? this.data.sun = 'a' : this.data.sun = 'b'
 2. 命名空间 
 ```
 var obj = {
-	fac: {
-	  ...
-	},
-	bra: {
-	  ...
-	},
-	mod: {
-	  ...
-	}
+    fac: {
+       ...
+     },
+     bra: {
+        ...
+     },
+     mod: {
+      ...
+     }
 }
 function test() {
     var a = b = 8;  ( 这里的b会被隐试的创建成全局对象 )
@@ -191,7 +191,7 @@ function test() {
 ```			
 ### 7. 严禁修改内建对象的原型链
     
-        修改内建的诸如 Object.prototype 和 Array.prototype 是被严厉禁止的。修改其它的内建对象比如 Function.prototype，虽危害没那么大，但始终还是会导致在开发过程中难以 debug 的问题，应当也要避免。			
+    修改内建的诸如 Object.prototype 和 Array.prototype 是被严厉禁止的。修改其它的内建对象比如 Function.prototype，虽危害没那么大，但始终还是会导致在开发过程中难以 debug 的问题，应当也要避免。			
 
 ## Vue开发规范
 
