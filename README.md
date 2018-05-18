@@ -1,12 +1,12 @@
-# Vue项目开发规范
+# 前后端分离项目开发规范
 
 ## 前端项目开发环境
 
 开发环境 windows10 + node6.8
 
-主要技术栈 vue2.0 + element-ui2.0 + axios1.8 + vue-router3.0 + vuex3.0
+主要技术栈 vue + element-ui2.0 + axios + vue-router + vuex + webpack + ES6/7
 
-## vue项目中js书写规范
+## js书写规范
 
 ### 1. 命名规范
 
@@ -194,7 +194,7 @@
     
         修改内建的诸如 Object.prototype 和 Array.prototype 是被严厉禁止的。修改其它的内建对象比如 Function.prototype，虽危害没那么大，但始终还是会导致在开发过程中难以 debug 的问题，应当也要避免。			
 
-## Vue项目vue文件规范
+## Vue开发规范
 
 * `es6`: 尽量去使用es6的书写格式, 极大程度的简化项目代码( 例: 箭头函数, 解构赋值... )
 
