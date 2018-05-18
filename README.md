@@ -1,5 +1,11 @@
 # Vue项目开发规范
 
+## 前端项目开发环境
+
+开发环境 windows10 + node6.8
+
+主要技术栈 vue2.0 + element-ui2.0 + axios1.8 + vue-router3.0 + vuex3.0
+
 ## vue项目中js书写规范
 
 ### 1. 命名规范
