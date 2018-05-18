@@ -28,7 +28,8 @@
 
 ## css全部采用预编译语言scss
 
-通过vue-cli构建vue项目开发环境，需在package.json文件添加依赖项"node-sass": "^4.7.2", "sass-loader": "^6.0.7",执行cnpm install；(注：html及css都对大小写不敏感，请不要在html,css中出现大写字母，css编写不要出现id)
+通过vue-cli构建vue项目开发环境，需在package.json文件添加依赖项"node-sass": "^4.7.2", "sass-loader": "^6.0.7",截图如下：
 
+<img src="https://github.com/zhuzeliang/9client/blob/master/images/scss.png" />
 
 
