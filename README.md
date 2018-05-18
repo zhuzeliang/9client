@@ -12,27 +12,27 @@
 
 * `大驼峰式命名法`：首字母大写。例：StudentInfo、UserInfo、ProductInfo
 
-        推荐:  
-      
-      import MyComponent from 'components/my-component/my-component' 
-      
-        不推荐: 
-    
-      import myComponent from 'components/myComponent/myComponent'
-
+推荐:
+```
+import MyComponent from 'components/my-component/my-component'
+```
+不推荐: 
+```
+import myComponent from 'components/myComponent/myComponent'
+```
 * `小驼峰式命名法`：首字母小写。例：studentInfo、userInfo、productInfo
    
-        推荐: 
-        // 是否可阅读
-        function canRead() {
-           return true
-        }
-        
-        // 获取名字
-        function getName() {
-           return this.name
-        }
-        
+推荐: 
+```
+// 是否可阅读
+function canRead() {
+   return true
+}
+// 获取名字
+function getName() {
+   return this.name
+}
+```       
 
 * `常量`: 使用全大写, 中间使用'_'连接
     
