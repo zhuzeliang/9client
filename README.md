@@ -181,12 +181,18 @@ function test() {
 推荐: 
 ```
 (function(log){
-  'use strict';		
+
+  'use strict';	
+  
    var arr = [10, 3, 7, 9, 100, 20];
+   
    var sum = arr.reduce(function(prevValue, currentValue) {
+   
      return prevValue + currentValue;
+     
    }, 0);
    console.log('The sum of array ' + arr + ' is: ' + sum);
+   
 }(window.console.log));
 ```			
 ### 7. 严禁修改内建对象的原型链    
@@ -211,4 +217,7 @@ function test() {
 
 * `错误警告及时处理`: 项目开发中出现的警告和错误( 控制台.可能不会影响当前开发 ), 在团队开发中请保持控制台的干净, 方便大家单独调试
 
+## css全部采用预编译语言scss
+
+通过vue-cli构建vue项目开发环境，需在package.json文件添加依赖项"node-sass": "^4.7.2", "sass-loader": "^6.0.7",执行cnpm install；
 
