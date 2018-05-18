@@ -158,37 +158,33 @@
      
         函数式编程让你可以简化代码并缩减维护成本，因为它容易复用，又适当地解耦和更少的依赖。 接下来的例子中，在一组数字求和的同一问题上，比较了两种解决方案。第一个例子是经典的程序处理，而第二个例子则是采用了函数式编程和 ECMA Script 5.1 的数组方法。
     
-                不推荐: 
-            (function(log){
-			  'use strict';
-			
-			  var arr = [10, 3, 7, 9, 100, 20],
-			      sum = 0,
-			      i;
-			
-			
-			  for(i = 0; i < arr.length; i++) {
-			    sum += arr[i];
-			  }
-			
-			  log('The sum of array ' + arr + ' is: ' + sum)
-			
-			}(window.console.log));
+不推荐: 
+```
+(function(log){
+  'use strict';
+
+  var arr = [10, 3, 7, 9, 100, 20],
+      sum = 0,
+      i;
+
+  for(i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  log('The sum of array ' + arr + ' is: ' + sum)
+
+}(window.console.log));
+```
 			
 	    推荐: 
 	    
 	        (function(log){
-			  'use strict';
-			
-			  var arr = [10, 3, 7, 9, 100, 20];
-			
-			  var sum = arr.reduce(function(prevValue, currentValue) {
-			    return prevValue + currentValue;
-			  }, 0);
-			
-			  log('The sum of array ' + arr + ' is: ' + sum);
-			
-			}(window.console.log));
+		  'use strict';		
+		   var arr = [10, 3, 7, 9, 100, 20];
+		   var sum = arr.reduce(function(prevValue, currentValue) {
+		     return prevValue + currentValue;
+		   }, 0);
+		   console.log('The sum of array ' + arr + ' is: ' + sum);
+		}(window.console.log));
 			
 ### 7. 严禁修改内建对象的原型链
     
