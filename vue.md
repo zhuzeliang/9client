@@ -14,7 +14,6 @@
 
 ```
 cnpm install node-sass --save-dev
-
 cnpm install node-sass --save-dev
 ```
 
@@ -41,7 +40,7 @@ module.exports = {
 	entry: { 
 		app: './src/main.js' 
 	} 
-} 
+}
 
 //修改后
 
