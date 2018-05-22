@@ -4,6 +4,7 @@
 
 ### PC端
 
+```
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -26,9 +27,11 @@
 </body>
 
 </html>
+```
 
 ### 移动端
 
+```
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -49,6 +52,7 @@
 </body>
 
 </html>
+```
 
 ## 元素属性
 不需要为 CSS、JS、html 指定类型属性，HTML5 中默认已包含(注：在jsp文件中和html5属性不被支持，出现报错的情况)
