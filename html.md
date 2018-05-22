@@ -15,12 +15,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="renderer" content="webkit">
     <title>PC端HTML模版</title>
-    <!-- S DNS预解析 -->
     <link rel="dns-prefetch" href="">
-    <!-- E DNS预解析 -->
-    <!-- S 样式引入 -->
     <link rel="stylesheet" href="css/index.css">
-    <!-- E 样式引入 -->
 </head>
 
 <body>
@@ -43,12 +39,8 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="email=no">
     <title>移动端HTML模版</title>
-    <!-- S DNS预解析 -->
     <link rel="dns-prefetch" href="">
-    <!-- E DNS预解析 -->
-    <!-- S 样式引入 -->
     <link rel="stylesheet" href="css/index.css">
-    <!-- E 样式引入 -->
 </head>
 
 <body>
@@ -100,7 +92,7 @@
 
 ## html代码书写风格
 
-> html、css 对大小写不敏感，团队统一使用小写，统一使用“-”连接
+> html、css 对大小写不敏感，统一使用小写，统一使用“-”连接
 
 推荐：
 
