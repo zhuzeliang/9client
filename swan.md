@@ -2,5 +2,5 @@
 
 ### 登录方式以url传参的形式
 
-> url: http://127.0.0.1:8280/Any800Chat?accountname=accountname;
+url: http://127.0.0.1:8280/Any800Chat?accountname=accountname; (accountname为用户登录名)
 
