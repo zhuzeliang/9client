@@ -79,8 +79,125 @@ module.exports = {
 
 ## 所有与后台交互接口请求统一在src/api/getData.js中
 
-未完，待续...
+```
+import axios from 'axios';
 
+//登录注册
+
+export const register = (params) => axios.post('/api/register', params);
+
+export const loginRegister = (params) => axios.post('/api/loginRegister', params);
+
+//联系人增删改查
+
+export const personSave = (params) => axios.post('/api/personSave', params);
+
+export const personList = () => axios.get('/api/personList');
+
+export const personRemove = (params) => axios.post('/api/personRemove', params);
+
+export const getUserInfo = () => axios.get('/api/userInfo');
+```
+
+注：方法名尽量语义化，采用驼峰命名规范
+
+## react-router 路由全部采用按需加载
+
+```
+import Vue from 'vue';
+import Router from 'vue-router';
+
+const home = r => require.ensure([], () => r(require('@/pages/home')), 'home');
+const channel = r => require.ensure([], () => r(require('@/pages/channel')), 'channel');
+const channelAdd = r => require.ensure([], () => r(require('@/pages/channelAdd')), 'channelAdd');
+const channelEdit = r => require.ensure([], () => r(require('@/pages/channelEdit')), 'channelEdit');
+const channelMsg = r => require.ensure([], () => r(require('@/pages/channelMsg')), 'channelMsg');
+const webInsert = r => require.ensure([], () => r(require('@/pages/webInsert')), 'webInsert');
+const viewMobile = r => require.ensure([], () => r(require('@/pages/viewMobile')), 'viewMobile');
+const viewPc = r => require.ensure([], () => r(require('@/pages/viewPc')), 'viewPc');
+const manage = r => require.ensure([], () => r(require('@/pages/manage')), 'manage');
+const error = r => require.ensure([], () => r(require('@/pages/error')), 'error');
+const logining = r => require.ensure([], () => r(require('@/pages/logining')), 'logining');
+const test = r => require.ensure([], () => r(require('@/pages/test')), 'test');
+const hint = r => require.ensure([], () => r(require('@/pages/talkSet/hint')), 'hint');
+const basicSet = r => require.ensure([], () => r(require('@/pages/talkSet/basicSet')), 'basicSet');
+const robotSet = r => require.ensure([], () => r(require('@/pages/talkSet/robotSet')), 'robotSet');
+const msgSet = r => require.ensure([], () => r(require('@/pages/talkSet/msgSet')), 'msgSet');
+const talkSet = r => require.ensure([], () => r(require('@/pages/talkSet')), 'talkSet');
+Vue.use(Router)
+
+const router = new Router({
+  // mode:'history',
+  linkActiveClass: 'link-active',
+  routes: [{
+      path: '/logining',
+      component: logining
+    }, {
+      path: '/test',
+      component: test
+    }, {
+      path: '/',
+      component: home,
+      meta: { requireAuth: true },
+      children: [{
+        path: '',
+        component: channel,
+      }, {
+        path: '/manage',
+        component: manage,
+        meta: [],
+      }, {
+        path: '/channelAdd',
+        component: channelAdd
+      }, {
+        path: '/channelEdit/:pk',
+        name: "channelEdit",
+        component: channelEdit
+      }, {
+        path: '/channelMsg/:pk',
+        name: "channelMsg",
+        component: channelMsg
+      }, {
+        path: '/webInsert/:pk',
+        name: 'webInsert',
+        component: webInsert
+      }, {
+        path: '/viewMobile/:pk',
+        name: 'viewMobile',
+        component: viewMobile
+      }, {
+        path: '/viewPc/:pk',
+        name: 'viewPc',
+        component: viewPc
+      }, {
+        path: '/robotSet/:pk',
+        component: talkSet,
+        children: [{
+          path: '',
+          name: 'robotSet',
+          component: robotSet
+        }, {
+          path: '/msgSet/:pk',
+          name: 'msgSet',
+          component: msgSet
+        }, {
+          path: '/hint/:pk',
+          name: 'hint',
+          component: hint
+        }, {
+          path: '/basicSet/:pk',
+          name: 'basicSet',
+          component: basicSet
+        }]
+      }]
+    }, {
+      path: '/*',
+      component: error,
+    }
+
+  ]
+});
+```
 ## 其他开发规范
 
 * es6/es7: 尽量去使用es6/es7的书写格式, 极大程度的简化项目代码( 例: 箭头函数, 解构赋值... )
